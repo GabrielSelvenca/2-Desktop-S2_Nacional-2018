@@ -27,9 +27,8 @@ namespace GabrielForm.Components
             InitializeComponent();
             Item = item;
             string[] partsName = item.Nome.Split(' ');
-            string[] letras = partsName[0].Split();
 
-            label1.Text = letras[0].ToUpper();
+            label1.Text = partsName[0][0].ToString().ToUpper();
 
             if (partsName.Length > 1 )
             {

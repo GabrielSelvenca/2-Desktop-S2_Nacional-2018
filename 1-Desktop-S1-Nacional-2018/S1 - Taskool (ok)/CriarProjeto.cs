@@ -22,13 +22,31 @@ namespace GabrielForm
 
         private void CriarProjeto_Load(object sender, System.EventArgs e)
         {
-            LoadLista(listaParticipantes);
+            LoadListaMembros(listaParticipantes);
         }
 
-        // Carrega lista de busca
-        private void LoadLista(List<Usuario> listaParticipantes)
+        // carrega lista de participantes para busca
+        private void LoadListaBusca(List<Usuario> listaParticipantes)
         {
-            // Criar outro para lista de busca (errado)
+            flowLayoutPanel2.Controls.Clear();
+
+            var usuario = ctx.Usuario.FirstOrDefault(x => x.Usuario1 == UserData.user.Usuario1);
+
+            flowLayoutPanel2.Controls.Add(new UserControl1(usuario));
+
+            foreach (var item in listaParticipantes)
+            {
+                UserControl1 userControl1 = new UserControl1(item);
+
+                userControl1.BotaoClidado += BtnRemover;
+
+                flowLayoutPanel2.Controls.Add(new UserControl1(item));
+            }
+        }
+
+        // carrega a lista de membros no projeto.
+        private void LoadListaMembros(List<Usuario> listaParticipantes)
+        {
             flowLayoutPanel1.Controls.Clear();
 
             var usuario = ctx.Usuario.FirstOrDefault(x => x.Usuario1 == UserData.user.Usuario1);
@@ -52,7 +70,7 @@ namespace GabrielForm
             if (dialog == DialogResult.Yes)
             {
                 listaParticipantes.Remove(user);
-                LoadLista(listaParticipantes);
+                LoadListaBusca(listaParticipantes);
             }
         }
 
@@ -64,9 +82,16 @@ namespace GabrielForm
 
         private void textBox1_TextChanged(object sender, System.EventArgs e)
         {
+            flowLayoutPanel2.Visible = true;
             string userSearch = textBox1.Text;
             listaParticipantes = ctx.Usuario.Where(u=> u.Nome.Contains(userSearch) || u.Email.Contains(userSearch)).ToList();
-            LoadLista(listaParticipantes);
+            LoadListaBusca(listaParticipantes);
+        }
+
+        private void textBox1_Leave(object sender, System.EventArgs e)
+        {
+            flowLayoutPanel2.Visible = false;
+            flowLayoutPanel2.Controls.Clear();
         }
     }
 }

@@ -154,5 +154,17 @@ namespace GabrielForm
         {
             new ConfigColors(this).Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CriarProjeto().Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new CriarProjeto().Show();
+        }
     }
 }
