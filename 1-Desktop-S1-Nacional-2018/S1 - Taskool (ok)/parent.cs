@@ -20,7 +20,7 @@ namespace GabrielForm
             FormBorderStyle = FormBorderStyle.FixedSingle;
             StartPosition = FormStartPosition.CenterScreen;
         }
-        public dbTarefasEntities ctx = new dbTarefasEntities();
+        public dbTarefasEntities1 ctx = new dbTarefasEntities1();
 
         private void parent_Load(object sender, EventArgs e)
         {
@@ -43,7 +43,7 @@ namespace GabrielForm
                     PutStyle(c);
 
                 if (c is ComboBox cmb)
-                    cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+                    cmb.DropDownStyle = ComboBoxStyle.DropDown;
             }
         }
     }

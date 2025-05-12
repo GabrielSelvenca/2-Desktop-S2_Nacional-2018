@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\09_Projects\Atividades\S1 - Taskool (ok)\S1 - Taskool (ok)\Models\Model1.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\Models\Model1.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

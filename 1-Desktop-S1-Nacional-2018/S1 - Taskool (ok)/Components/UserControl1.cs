@@ -1,52 +1,64 @@
 ﻿using GabrielForm.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GabrielForm.Components
+namespace GabrielForm
 {
     public partial class UserControl1 : UserControl
     {
-        public EventHandler<Usuario> BotaoClidado;
+        public enum TipoControl
+        {
+            Owner,
+            Usuario
+        }
 
         public UserControl1()
         {
             InitializeComponent();
         }
 
-        public UserControl1(Usuario item)
+        public UserControl1(Usuario item, TipoControl tipo = TipoControl.Usuario)
         {
             InitializeComponent();
             Item = item;
-            string[] partsName = item.Nome.Split(' ');
+            string[] parts = item.Nome.Split(' ');
+            label1.Text = parts[0][0].ToString().ToUpper();
 
-            label1.Text = partsName[0][0].ToString().ToUpper();
-
-            if (partsName.Length > 1 )
-            {
-                label2.Text = $"{partsName[0]} {partsName[1]}";
-            }
+            if (parts.Length > 1)
+                label2.Text = $"{parts[0]} {parts[1]}";
             else
-            {
-                label2.Text = partsName[0];
-            }
+                label2.Text = parts[0];
 
-            button1.Click += Button1_Click;
+            ConfigControl(item, tipo);
         }
+
+        private void ConfigControl(Usuario item, TipoControl tipo)
+        {
+            switch (tipo)
+            {
+                case TipoControl.Owner:
+                    button1.Enabled = false;
+                    button1.ForeColor = Color.Blue;
+                    button1.Text = "Proprietário";
+                    break;
+                case TipoControl.Usuario:
+                    button1.Visible = true;
+                    button1.Click += Button1_Click;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+        private event EventHandler<Usuario> BotaoClicado;
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            BotaoClidado?.Invoke(this, Item);
+            BotaoClicado?.Invoke(this, Item);
         }
 
-        public Usuario Item { get; }
+        private Usuario Item { get; }
     }
 }

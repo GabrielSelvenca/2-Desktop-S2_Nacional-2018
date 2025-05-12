@@ -13,10 +13,10 @@ namespace GabrielForm.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class dbTarefasEntities : DbContext
+    public partial class dbTarefasEntities1 : DbContext
     {
-        public dbTarefasEntities()
-            : base("name=dbTarefasEntities")
+        public dbTarefasEntities1()
+            : base("name=dbTarefasEntities1")
         {
         }
     
@@ -25,6 +25,9 @@ namespace GabrielForm.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Notificacoes> Notificacoes { get; set; }
+        public virtual DbSet<Projeto> Projeto { get; set; }
+        public virtual DbSet<Projeto_Tarefas> Projeto_Tarefas { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

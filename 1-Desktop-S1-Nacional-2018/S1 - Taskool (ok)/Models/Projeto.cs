@@ -12,32 +12,27 @@ namespace GabrielForm.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Usuario
+    public partial class Projeto
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Usuario()
+        public Projeto()
         {
             this.Notificacoes = new HashSet<Notificacoes>();
-            this.Projeto = new HashSet<Projeto>();
             this.Projeto_Tarefas = new HashSet<Projeto_Tarefas>();
-            this.Projeto1 = new HashSet<Projeto>();
+            this.Usuario1 = new HashSet<Usuario>();
         }
     
         public int Codigo { get; set; }
         public string Nome { get; set; }
-        public string Email { get; set; }
-        public string Usuario1 { get; set; }
-        public string Senha { get; set; }
-        public string Telefone { get; set; }
-        public byte[] Foto { get; set; }
+        public int CodUsuario { get; set; }
+        public bool NaoPertube { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Notificacoes> Notificacoes { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Projeto> Projeto { get; set; }
+        public virtual Usuario Usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Projeto_Tarefas> Projeto_Tarefas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Projeto> Projeto1 { get; set; }
+        public virtual ICollection<Usuario> Usuario1 { get; set; }
     }
 }

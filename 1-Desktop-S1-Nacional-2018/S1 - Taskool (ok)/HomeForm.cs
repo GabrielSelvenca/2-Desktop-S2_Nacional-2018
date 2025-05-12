@@ -74,7 +74,7 @@ namespace GabrielForm
         }
 
         Random random = new Random();
-        private async void LoadJson()
+        private void LoadJson()
         {
             var caminhoJson = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "mensagens.json");
             var conteudo = File.ReadAllText(caminhoJson);
