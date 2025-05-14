@@ -52,7 +52,7 @@ namespace GabrielForm
             }
         }
 
-        private event EventHandler<Usuario> BotaoClicado;
+        public event EventHandler<Usuario> BotaoClicado;
 
         private void Button1_Click(object sender, EventArgs e)
         {

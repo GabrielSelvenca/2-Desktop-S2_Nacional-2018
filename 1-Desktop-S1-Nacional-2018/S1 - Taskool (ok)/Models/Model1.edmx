@@ -312,7 +312,7 @@
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <End Role="Projeto" Type="Self.Projeto" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="dbTarefasEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="dbTarefasEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Notificacoes" EntityType="Self.Notificacoes" />
           <EntitySet Name="Projeto" EntityType="Self.Projeto" />
           <EntitySet Name="Projeto_Tarefas" EntityType="Self.Projeto_Tarefas" />
@@ -347,7 +347,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="dbTarefasModelStoreContainer" CdmEntityContainer="dbTarefasEntities1">
+        <EntityContainerMapping StorageEntityContainer="dbTarefasModelStoreContainer" CdmEntityContainer="dbTarefasEntities">
           <EntitySetMapping Name="Notificacoes">
             <EntityTypeMapping TypeName="dbTarefasModel.Notificacoes">
               <MappingFragment StoreEntitySet="Notificacoes">

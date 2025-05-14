@@ -1,6 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="dbTarefasModelStoreContainer" CdmEntityContainer="dbTarefasEntities">
+    <EntitySetMapping Name="Notificacoes">
+      <EntityTypeMapping TypeName="dbTarefasModel.Notificacoes">
+        <MappingFragment StoreEntitySet="Notificacoes">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="CodProjeto" ColumnName="CodProjeto" />
+          <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+          <ScalarProperty Name="isFechada" ColumnName="isFechada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projeto">
+      <EntityTypeMapping TypeName="dbTarefasModel.Projeto">
+        <MappingFragment StoreEntitySet="Projeto">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="CodUsuario" ColumnName="CodUsuario" />
+          <ScalarProperty Name="NaoPertube" ColumnName="NaoPertube" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Projeto_Tarefas">
+      <EntityTypeMapping TypeName="dbTarefasModel.Projeto_Tarefas">
+        <MappingFragment StoreEntitySet="Projeto_Tarefas">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="CodProjeto" ColumnName="CodProjeto" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="isConcluida" ColumnName="isConcluida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Usuario">
       <EntityTypeMapping TypeName="dbTarefasModel.Usuario">
         <MappingFragment StoreEntitySet="Usuario">
@@ -14,5 +46,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <AssociationSetMapping Name="Items_Favoritos" TypeName="dbTarefasModel.Items_Favoritos" StoreEntitySet="Items_Favoritos">
+      <EndProperty Name="Projeto_Tarefas">
+        <ScalarProperty Name="Codigo" ColumnName="CodTarefa" />
+      </EndProperty>
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="Codigo" ColumnName="CodUsuario" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="Projeto_Membros" TypeName="dbTarefasModel.Projeto_Membros" StoreEntitySet="Projeto_Membros">
+      <EndProperty Name="Usuario">
+        <ScalarProperty Name="Codigo" ColumnName="CodMembro" />
+      </EndProperty>
+      <EndProperty Name="Projeto">
+        <ScalarProperty Name="Codigo" ColumnName="CodProjeto" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -1,7 +1,9 @@
 ﻿using GabrielForm.Models;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices;
+using System.Media;
 using System.Windows.Forms;
 
 namespace GabrielForm
@@ -10,7 +12,6 @@ namespace GabrielForm
     {
         List<Usuario> listaSelecionados = new List<Usuario>();
         List<UserControl1> listaControl = new List<UserControl1>();
-        private Timer filterTimer = new Timer();
         private bool ignoreTextChange = false;
 
         public CriarProjeto()
@@ -46,14 +47,16 @@ namespace GabrielForm
 
         private void label3_Click(object sender, System.EventArgs e)
         {
-            flowLayoutPanel1.Visible = false;
-            panel2.Visible = true;
+            panel3.Visible = !panel3.Visible;
+            label3.ForeColor = Color.Black;
+            label2.ForeColor = Color.Gray;
         }
 
         private void label2_Click(object sender, System.EventArgs e)
         {
-            flowLayoutPanel1.Visible = true;
-            panel2.Visible = false;
+            panel3.Visible = !panel3.Visible;
+            label2.ForeColor = Color.Black;
+            label3.ForeColor = Color.Gray;
         }
 
         private void LoadLista()
@@ -62,7 +65,7 @@ namespace GabrielForm
 
             foreach (var user in listaControl)
             {
-                user.Width = flowLayoutPanel1.ClientSize.Width - flowLayoutPanel1.Margin.Horizontal;
+                user.Width = flowLayoutPanel1.ClientSize.Width - flowLayoutPanel1.Padding.Horizontal - SystemInformation.VerticalScrollBarWidth;
 
                 flowLayoutPanel1.Controls.Add(user);
             }
@@ -74,29 +77,42 @@ namespace GabrielForm
 
             string nomeUsuario = comboBox1.Text.Split('(')[0].Trim();
 
-            var usuarioSelect = ctx.Usuario.FirstOrDefault(u=> u.Nome == nomeUsuario);
+            var usuarioSelect = ctx.Usuario.FirstOrDefault(u => u.Nome == nomeUsuario);
 
-            if (usuarioSelect != null)
+            if (usuarioSelect == null) return;
+
+            if (!listaSelecionados.Any(lista => lista.Nome == nomeUsuario))
             {
-                if (!listaSelecionados.Any(lista => lista.Nome == nomeUsuario))
-                {
-                    listaSelecionados.Add(usuarioSelect);
+                listaSelecionados.Add(usuarioSelect);
 
-                    var userControl = new UserControl1(
-                        usuarioSelect,
-                        UserControl1.TipoControl.Usuario
-                    );
+                var userControl = new UserControl1(
+                    usuarioSelect,
+                    UserControl1.TipoControl.Usuario
+                );
 
-                    listaControl.Add(userControl);
+                userControl.BotaoClicado += UserControl_BotaoClicado;
 
-                    LoadLista();
-                }
+                listaControl.Add(userControl);
+
+                LoadLista();
             }
 
             ignoreTextChange = true;
             comboBox1.Text = "";
             ignoreTextChange = false;
-        }   
+            comboBox1.Focus();
+        }
+
+        private void UserControl_BotaoClicado(object sender, Usuario e)
+        {
+            var control = sender as UserControl1;
+            if (control == null) return;
+
+            listaControl.Remove(control);
+            listaSelecionados.RemoveAll(u => u.Codigo == e.Codigo);
+
+            LoadLista();
+        }
 
         private void comboBox1_TextChanged(object sender, System.EventArgs e)
         {
@@ -120,12 +136,72 @@ namespace GabrielForm
 
         private void button1_Click(object sender, System.EventArgs e)
         {
-            foreach(var user in listaSelecionados)
+            var nomeProjeto = textBox1.Text.Trim();
+            if (nomeProjeto.Replace(" ", "").Length < 3)
             {
-                var membro = new Projeto_Tarefas
-                {
-                    
-                }
+                SystemSounds.Beep.Play();
+                "Nome do projeto não pode conter espaços em branco.".Alert();
+                return;
+            }
+
+            var usuario_atual = ctx.Usuario.FirstOrDefault(u => u.Nome == UserData.user.Nome);
+
+            var projeto = new Projeto
+            {
+                Nome = nomeProjeto,
+                CodUsuario = usuario_atual.Codigo,
+                NaoPertube = checkBox1.Checked
+            };
+
+            ctx.Projeto.Add(projeto);
+            ctx.SaveChanges();
+
+            foreach (var user in listaSelecionados)
+            {
+
+                ctx.Database.ExecuteSqlCommand(
+                    "INSERT INTO Projeto_Membros (CodMembro, CodProjeto) VALUES (@p0, @p1)",
+                    user.Codigo,
+                    projeto.Codigo
+                    );
+            }
+
+            "Projeto criado!".Alert();
+            Close();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBox1.Checked)
+                checkBox1.Text = "Ativado";
+            else
+                checkBox1.Text = "Desativado";
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            var nomeProjeto = textBox1.Text;
+            if (nomeProjeto.Length > 2)
+            {
+                button1.Enabled = true;
+                button1.BackColor = SystemColors.Control;
+                button1.UseVisualStyleBackColor = true;
+            }
+            else
+            {
+                button1.Enabled = false;
+                button1.BackColor = SystemColors.ControlDark;
+                button1.UseVisualStyleBackColor = true;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var question = "Deseja mesmo cancelar a criação?".Question();
+
+            if (question == DialogResult.Yes)
+            {
+                Close();
             }
         }
     }

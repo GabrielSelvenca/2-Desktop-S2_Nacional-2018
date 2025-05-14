@@ -1,5 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="dbTarefasModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Notificacoes">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Texto" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Data" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CodProjeto" Type="Int32" />
+    <Property Name="CodUsuario" Type="Int32" Nullable="false" />
+    <Property Name="isFechada" Type="Boolean" />
+    <NavigationProperty Name="Projeto" Relationship="Self.FK__Notificac__CodPr__412EB0B6" FromRole="Notificacoes" ToRole="Projeto" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Notificac__CodUs__403A8C7D" FromRole="Notificacoes" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Projeto">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nome" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CodUsuario" Type="Int32" Nullable="false" />
+    <Property Name="NaoPertube" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Notificacoes" Relationship="Self.FK__Notificac__CodPr__412EB0B6" FromRole="Projeto" ToRole="Notificacoes" />
+    <NavigationProperty Name="Usuario" Relationship="Self.FK__Projeto__CodUsua__3A81B327" FromRole="Projeto" ToRole="Usuario" />
+    <NavigationProperty Name="Projeto_Tarefas" Relationship="Self.FK__Projeto_T__CodPr__3D5E1FD2" FromRole="Projeto" ToRole="Projeto_Tarefas" />
+    <NavigationProperty Name="Usuario1" Relationship="Self.Projeto_Membros" FromRole="Projeto" ToRole="Usuario" />
+  </EntityType>
+  <EntityType Name="Projeto_Tarefas">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Name="Codigo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodProjeto" Type="Int32" Nullable="false" />
+    <Property Name="Descricao" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="isConcluida" Type="Boolean" />
+    <NavigationProperty Name="Projeto" Relationship="Self.FK__Projeto_T__CodPr__3D5E1FD2" FromRole="Projeto_Tarefas" ToRole="Projeto" />
+    <NavigationProperty Name="Usuario" Relationship="Self.Items_Favoritos" FromRole="Projeto_Tarefas" ToRole="Usuario" />
+  </EntityType>
   <EntityType Name="Usuario">
     <Key>
       <PropertyRef Name="Codigo" />
@@ -9,10 +46,97 @@
     <Property Name="Email" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Usuario1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Senha" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Telefone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="Notificacoes" Relationship="Self.FK__Notificac__CodUs__403A8C7D" FromRole="Usuario" ToRole="Notificacoes" />
+    <NavigationProperty Name="Projeto" Relationship="Self.FK__Projeto__CodUsua__3A81B327" FromRole="Usuario" ToRole="Projeto" />
+    <NavigationProperty Name="Projeto_Tarefas" Relationship="Self.Items_Favoritos" FromRole="Usuario" ToRole="Projeto_Tarefas" />
+    <NavigationProperty Name="Projeto1" Relationship="Self.Projeto_Membros" FromRole="Usuario" ToRole="Projeto" />
   </EntityType>
+  <Association Name="FK__Notificac__CodPr__412EB0B6">
+    <End Role="Projeto" Type="Self.Projeto" Multiplicity="0..1" />
+    <End Role="Notificacoes" Type="Self.Notificacoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projeto">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Notificacoes">
+        <PropertyRef Name="CodProjeto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Notificac__CodUs__403A8C7D">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Notificacoes" Type="Self.Notificacoes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Notificacoes">
+        <PropertyRef Name="CodUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Projeto__CodUsua__3A81B327">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="Projeto" Type="Self.Projeto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Projeto">
+        <PropertyRef Name="CodUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Projeto_T__CodPr__3D5E1FD2">
+    <End Role="Projeto" Type="Self.Projeto" Multiplicity="1" />
+    <End Role="Projeto_Tarefas" Type="Self.Projeto_Tarefas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Projeto">
+        <PropertyRef Name="Codigo" />
+      </Principal>
+      <Dependent Role="Projeto_Tarefas">
+        <PropertyRef Name="CodProjeto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Items_Favoritos">
+    <End Role="Projeto_Tarefas" Type="Self.Projeto_Tarefas" Multiplicity="*" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+  </Association>
+  <Association Name="Projeto_Membros">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <End Role="Projeto" Type="Self.Projeto" Multiplicity="*" />
+  </Association>
   <EntityContainer Name="dbTarefasEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Notificacoes" EntityType="Self.Notificacoes" />
+    <EntitySet Name="Projeto" EntityType="Self.Projeto" />
+    <EntitySet Name="Projeto_Tarefas" EntityType="Self.Projeto_Tarefas" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+    <AssociationSet Name="FK__Notificac__CodPr__412EB0B6" Association="Self.FK__Notificac__CodPr__412EB0B6">
+      <End Role="Projeto" EntitySet="Projeto" />
+      <End Role="Notificacoes" EntitySet="Notificacoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Notificac__CodUs__403A8C7D" Association="Self.FK__Notificac__CodUs__403A8C7D">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Notificacoes" EntitySet="Notificacoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Projeto__CodUsua__3A81B327" Association="Self.FK__Projeto__CodUsua__3A81B327">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Projeto" EntitySet="Projeto" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Projeto_T__CodPr__3D5E1FD2" Association="Self.FK__Projeto_T__CodPr__3D5E1FD2">
+      <End Role="Projeto" EntitySet="Projeto" />
+      <End Role="Projeto_Tarefas" EntitySet="Projeto_Tarefas" />
+    </AssociationSet>
+    <AssociationSet Name="Items_Favoritos" Association="Self.Items_Favoritos">
+      <End Role="Projeto_Tarefas" EntitySet="Projeto_Tarefas" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="Projeto_Membros" Association="Self.Projeto_Membros">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Projeto" EntitySet="Projeto" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>
