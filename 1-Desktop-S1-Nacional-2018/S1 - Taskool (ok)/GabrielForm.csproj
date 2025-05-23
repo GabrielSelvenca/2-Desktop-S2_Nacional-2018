@@ -77,11 +77,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CircleBox.cs" />
-    <Compile Include="Components\UserControl2.cs">
+    <Compile Include="Components\ProjetoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\UserControl2.Designer.cs">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+    <Compile Include="Components\ProjetoControl.Designer.cs">
+      <DependentUpon>ProjetoControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ProjetoListaControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ProjetoListaControl.Designer.cs">
+      <DependentUpon>ProjetoListaControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\TarefaControl.cs">
       <SubType>UserControl</SubType>
@@ -161,26 +167,37 @@
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="UserData.cs" />
+    <EmbeddedResource Include="Components\ProjetoControl.resx">
+      <DependentUpon>ProjetoControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ProjetoListaControl.resx">
+      <DependentUpon>ProjetoListaControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\TarefaControl.resx">
       <DependentUpon>TarefaControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\UserControl2.resx">
-      <DependentUpon>UserControl2.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ConfigColors.resx">
       <DependentUpon>ConfigColors.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CriarProjeto.resx">
       <DependentUpon>CriarProjeto.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="parent.resx">
       <DependentUpon>parent.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -194,9 +211,11 @@
     </Compile>
     <EmbeddedResource Include="Cadastrar.resx">
       <DependentUpon>Cadastrar.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -230,6 +249,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\estrela_off.png" />
+    <None Include="Resources\estrela_on.png" />
+    <None Include="Resources\Rosto Triste.png" />
     <Content Include="Resources\user.png" />
   </ItemGroup>
   <ItemGroup>

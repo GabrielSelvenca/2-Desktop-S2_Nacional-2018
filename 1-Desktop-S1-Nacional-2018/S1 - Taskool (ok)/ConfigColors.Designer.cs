@@ -69,7 +69,7 @@
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(442, 26);
             this.maskedTextBox1.TabIndex = 10;
-            this.maskedTextBox1.TextChanged += new System.EventHandler(this.button1_Click);
+            this.maskedTextBox1.TextChanged += MaskedTextBox1_TextChanged;
             // 
             // label4
             // 

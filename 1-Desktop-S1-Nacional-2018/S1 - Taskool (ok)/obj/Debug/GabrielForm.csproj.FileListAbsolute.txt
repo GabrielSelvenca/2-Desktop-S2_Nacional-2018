@@ -30,7 +30,6 @@ C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\Interop.WMPLauncher.dll
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\Interop.WMPLib.dll
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.csproj.ResolveComReference.cache
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.UserControl2.resources
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.ConfigColors.resources
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.CriarProjeto.resources
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Form1.resources
@@ -53,3 +52,6 @@ C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.exe
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.pdb
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.UserControl1.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.ProjetoListaControl.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.ProjetoControl.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.TarefaControl.resources

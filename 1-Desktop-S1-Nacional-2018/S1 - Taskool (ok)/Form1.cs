@@ -15,6 +15,8 @@ namespace GabrielForm
         {
             InitializeComponent();
             label4.Visible = false;
+
+            this.Text = "Entrar | Taskool";
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

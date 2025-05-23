@@ -6,14 +6,6 @@ namespace GabrielForm
 {
     public partial class ConfigColors : parent
     {
-        public ConfigColors()
-        {
-            InitializeComponent();
-            this.Text = "Select Color | Taskool";
-            maskedTextBox1.Mask = "rgb(000, 000, 000)";
-            maskedTextBox1.TextChanged += MaskedTextBox1_TextChanged;
-        }
-
         private void MaskedTextBox1_TextChanged(object sender, EventArgs e)
         {
             if (maskedTextBox1.MaskCompleted)

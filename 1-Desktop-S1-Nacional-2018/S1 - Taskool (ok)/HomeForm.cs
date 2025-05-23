@@ -5,16 +5,25 @@ using System;
 using System.Windows.Forms;
 using System.Linq;
 using WMPLib;
+using GabrielForm.Components;
+using GabrielForm.Models;
 
 namespace GabrielForm
 {
     public partial class HomeForm : parent
     {
         WindowsMediaPlayer media = new WindowsMediaPlayer();
+
+
+        List<string> musicas = new List<string>();
+        int posicao = 0;
+
+        List<Control> menuPanelOriginalControls = new List<Control>();
+
         public HomeForm()
         {
             InitializeComponent();
-            this.Text = "Home Page | Taskool";
+            this.Text = "Menu Principal | Taskool";
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
@@ -33,11 +42,6 @@ namespace GabrielForm
             }
         }
 
-
-
-        List<string> musicas = new List<string>();
-        int posicao = 0;
-
         private void HomeForm_Load(object sender, EventArgs e)
         {
             label4.Text = DateTime.Now.ToString("HH:mm");
@@ -53,6 +57,7 @@ namespace GabrielForm
 
             LoadMensagem();
             LoadJson();
+            LoadProjetos();
         }
 
         private void Media_PlayStateChange(int NewState)
@@ -84,6 +89,46 @@ namespace GabrielForm
             label6.Text = json[indicelist].mensagem;
             label10.Text = json[indicelist].autor;
 
+        }
+
+        private void LoadProjetos()
+        {
+            var codUsuario = UserData.user.Codigo;
+
+            var projetosId = ctx.Database.SqlQuery<int>("SELECT CodProjeto FROM Projeto_Membros WHERE CodMembro = @p0", codUsuario).ToList();
+
+            if (projetosId.Count < 1) return;
+
+            var projetos = ctx.Projeto.Where(p => projetosId.Contains(p.Codigo)).ToList();
+
+            foreach (var projeto in projetos)
+            {
+                var projetoControl = new ProjetoListaControl(projeto);
+                flowLayoutPanel1.Controls.Add(projetoControl);
+                projetoControl.Click += ProjetoControl_Click;
+            }
+        }
+
+        private void ProjetoControl_Click(object sender, EventArgs e)
+        {
+            if (sender is ProjetoListaControl control && control.Tag is Projeto projeto)
+            {
+                var projetoSelecionado = ctx.Projeto.FirstOrDefault(p => p.Codigo == projeto.Codigo);
+                if (projetoSelecionado != null)
+                {
+                    if (menuPanelOriginalControls.Count == 0)
+                        menuPanelOriginalControls.AddRange(contentPanel.Controls.Cast<Control>().ToList());
+
+                    contentPanel.Controls.Clear();
+
+                    var projetoView = new ProjetoControl(projetoSelecionado)
+                    {
+                        Dock = DockStyle.Fill
+                    };
+
+                    contentPanel.Controls.Add(projetoView);
+                }
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -126,7 +171,6 @@ namespace GabrielForm
                 else if (DateTime.Now.Hour >= 4 && DateTime.Now.Hour < 12)
                     mensagem = $"Good morning, {UserData.user.Nome}";
             }
-            ;
 
             label5.Text = mensagem;
         }
@@ -162,9 +206,24 @@ namespace GabrielForm
         }
 
         private void button4_Click(object sender, EventArgs e)
-        {
+        { 
             Hide();
             new CriarProjeto().Show();
+        }
+
+        private void CarrregarMenu()
+        {
+            contentPanel.Controls.Clear();
+
+            foreach (var control in menuPanelOriginalControls)
+            {
+                contentPanel.Controls.Add(control);
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            CarrregarMenu();
         }
     }
 }

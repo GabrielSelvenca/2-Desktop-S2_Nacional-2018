@@ -21,11 +21,13 @@ namespace GabrielForm
             this.FormClosing += CriarProjeto_FormClosing;
         }
 
-        private void CriarProjeto_Load(object sender, System.EventArgs e)
+        private void CriarProjeto_Load(object sender, EventArgs e)
         {
-            flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.WrapContents = false;
             flowLayoutPanel1.FlowDirection = FlowDirection.TopDown;
+
+            comboBox1.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            comboBox1.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
             var usuarioAtual = ctx.Usuario.FirstOrDefault(u => u.Nome == UserData.user.Nome);
             listaSelecionados.Add(usuarioAtual);
@@ -33,7 +35,7 @@ namespace GabrielForm
             var userControl = new UserControl1(
                 usuarioAtual,
                 UserControl1.TipoControl.Owner
-                );
+            );
 
             listaControl.Add(userControl);
 
@@ -45,14 +47,14 @@ namespace GabrielForm
             new HomeForm().Show();
         }
 
-        private void label3_Click(object sender, System.EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
             panel3.Visible = !panel3.Visible;
             label3.ForeColor = Color.Black;
             label2.ForeColor = Color.Gray;
         }
 
-        private void label2_Click(object sender, System.EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
             panel3.Visible = !panel3.Visible;
             label2.ForeColor = Color.Black;
@@ -66,41 +68,65 @@ namespace GabrielForm
             foreach (var user in listaControl)
             {
                 user.Width = flowLayoutPanel1.ClientSize.Width - flowLayoutPanel1.Padding.Horizontal - SystemInformation.VerticalScrollBarWidth;
-
                 flowLayoutPanel1.Controls.Add(user);
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, System.EventArgs e)
+        private void AtualizarSugestoesComboBox()
         {
-            if (string.IsNullOrWhiteSpace(comboBox1.Text)) return;
+            var texto = comboBox1.Text?.Trim();
+            if (string.IsNullOrWhiteSpace(texto)) return;
 
-            string nomeUsuario = comboBox1.Text.Split('(')[0].Trim();
+            var codigosSelecionados = listaSelecionados.Select(u => u.Codigo).ToList();
 
-            var usuarioSelect = ctx.Usuario.FirstOrDefault(u => u.Nome == nomeUsuario);
+            var usuariosEncontrados = ctx.Usuario
+                .Where(u => (u.Nome.Contains(texto) || u.Email.Contains(texto)) && !codigosSelecionados.Contains(u.Codigo))
+                .Take(20)
+                .ToList();
 
-            if (usuarioSelect == null) return;
+            comboBox1.BeginUpdate();
+            comboBox1.Items.Clear();
 
-            if (!listaSelecionados.Any(lista => lista.Nome == nomeUsuario))
+            foreach (var usuario in usuariosEncontrados)
             {
-                listaSelecionados.Add(usuarioSelect);
-
-                var userControl = new UserControl1(
-                    usuarioSelect,
-                    UserControl1.TipoControl.Usuario
-                );
-
-                userControl.BotaoClicado += UserControl_BotaoClicado;
-
-                listaControl.Add(userControl);
-
-                LoadLista();
+                comboBox1.Items.Add($"{usuario.Nome} {usuario.Email}");
             }
 
-            ignoreTextChange = true;
-            comboBox1.Text = "";
-            ignoreTextChange = false;
-            comboBox1.Focus();
+            comboBox1.EndUpdate();
+
+            comboBox1.DroppedDown = true;
+
+            comboBox1.SelectionStart = comboBox1.Text.Length;
+            comboBox1.SelectionLength = 0;
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (ignoreTextChange || string.IsNullOrEmpty(comboBox1.Text)) return;
+            AtualizarSugestoesComboBox();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem is Usuario usuarioSelect)
+            {
+                if (!listaSelecionados.Any(u => u.Codigo == usuarioSelect.Codigo))
+                {
+                    listaSelecionados.Add(usuarioSelect);
+
+                    var userControl = new UserControl1(usuarioSelect, UserControl1.TipoControl.Usuario);
+                    userControl.BotaoClicado += UserControl_BotaoClicado;
+
+                    listaControl.Add(userControl);
+                    LoadLista();
+                }
+
+                ignoreTextChange = true;
+                comboBox1.SelectedIndex = -1;
+                comboBox1.Text = "";
+                ignoreTextChange = false;
+                comboBox1.Focus();
+            }
         }
 
         private void UserControl_BotaoClicado(object sender, Usuario e)
@@ -114,27 +140,7 @@ namespace GabrielForm
             LoadLista();
         }
 
-        private void comboBox1_TextChanged(object sender, System.EventArgs e)
-        {
-            if (ignoreTextChange || string.IsNullOrEmpty(comboBox1.Text)) return;
-
-            comboBox1.Items.Clear();
-            comboBox1.SelectionStart = comboBox1.Text.Length;
-
-            var codigosSelecionados = listaSelecionados.Select(u => u.Codigo).ToList();
-
-            var usuariosEncontrados = ctx.Usuario.Where(u => (u.Nome.Contains(comboBox1.Text) || u.Email.Contains(comboBox1.Text)) && !codigosSelecionados.Contains(u.Codigo))
-                .Take(20)
-                .ToList();
-
-            comboBox1.Items.AddRange(
-                usuariosEncontrados.Select(u => u.Nome).ToArray()
-            );
-
-            comboBox1.DroppedDown = true;
-        }
-
-        private void button1_Click(object sender, System.EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             var nomeProjeto = textBox1.Text.Trim();
             if (nomeProjeto.Replace(" ", "").Length < 3)
@@ -144,12 +150,12 @@ namespace GabrielForm
                 return;
             }
 
-            var usuario_atual = ctx.Usuario.FirstOrDefault(u => u.Nome == UserData.user.Nome);
+            var usuarioAtual = ctx.Usuario.FirstOrDefault(u => u.Nome == UserData.user.Nome);
 
             var projeto = new Projeto
             {
                 Nome = nomeProjeto,
-                CodUsuario = usuario_atual.Codigo,
+                CodUsuario = usuarioAtual.Codigo,
                 NaoPertube = checkBox1.Checked
             };
 
@@ -158,47 +164,33 @@ namespace GabrielForm
 
             foreach (var user in listaSelecionados)
             {
-
                 ctx.Database.ExecuteSqlCommand(
                     "INSERT INTO Projeto_Membros (CodMembro, CodProjeto) VALUES (@p0, @p1)",
                     user.Codigo,
                     projeto.Codigo
-                    );
+                );
             }
 
-            "Projeto criado!".Alert();
+            "Projeto criado!".Information();
             Close();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (!checkBox1.Checked)
-                checkBox1.Text = "Ativado";
-            else
-                checkBox1.Text = "Desativado";
+            checkBox1.Text = checkBox1.Checked ? "Desativado" : "Ativado";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             var nomeProjeto = textBox1.Text;
-            if (nomeProjeto.Length > 2)
-            {
-                button1.Enabled = true;
-                button1.BackColor = SystemColors.Control;
-                button1.UseVisualStyleBackColor = true;
-            }
-            else
-            {
-                button1.Enabled = false;
-                button1.BackColor = SystemColors.ControlDark;
-                button1.UseVisualStyleBackColor = true;
-            }
+            button1.Enabled = nomeProjeto.Length > 2;
+            button1.BackColor = button1.Enabled ? SystemColors.Control : SystemColors.ControlDark;
+            button1.UseVisualStyleBackColor = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             var question = "Deseja mesmo cancelar a criação?".Question();
-
             if (question == DialogResult.Yes)
             {
                 Close();
