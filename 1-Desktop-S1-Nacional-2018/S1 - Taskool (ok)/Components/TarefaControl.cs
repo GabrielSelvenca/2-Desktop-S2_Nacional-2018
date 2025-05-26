@@ -1,12 +1,5 @@
 ﻿using GabrielForm.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GabrielForm.Components
@@ -23,8 +16,10 @@ namespace GabrielForm.Components
             InitializeComponent();
 
             projeto_Tarefas = proj_tarefa;
+            this.Tag = projeto_Tarefas;
 
             checkBox1.Text = proj_tarefa.Descricao;
+            checkBox1.Checked = (bool)projeto_Tarefas.isConcluida;
 
             checkBox1.CheckedChanged += CheckBox1_CheckedChanged;
         }
@@ -36,18 +31,20 @@ namespace GabrielForm.Components
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = pictureBox1.Image == Properties.Resources.estrela_off1 ? Properties.Resources.estrela_on1 : Properties.Resources.estrela_off1;
-
-            if (pictureBox1.Image == Properties.Resources.estrela_on1)
+            if (pictureBox1.Tag.ToString() == "Off")
             {
+                pictureBox1.Image = Properties.Resources.estrela_on;
+                pictureBox1.Tag = "On";
                 ctx.Database
                     .ExecuteSqlCommand("INSERT INTO Items_Favoritos (CodUsuario, CodTarefa) VALUES (@p0, @p1)",
                     UserData.user.Codigo,
                     projeto_Tarefas.Codigo
                     );
             }
-            else
+            else if (pictureBox1.Tag.ToString() == "On")
             {
+                pictureBox1.Image = Properties.Resources.estrela_off;
+                pictureBox1.Tag = "Off";
                 ctx.Database
                     .ExecuteSqlCommand("DELETE FROM Items_Favoritos WHERE CodUsuario = @p0 AND CodTarefa = @p1",
                     UserData.user.Codigo,

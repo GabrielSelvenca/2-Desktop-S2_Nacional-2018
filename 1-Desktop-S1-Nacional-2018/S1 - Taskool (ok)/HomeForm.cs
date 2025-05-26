@@ -7,6 +7,7 @@ using System.Linq;
 using WMPLib;
 using GabrielForm.Components;
 using GabrielForm.Models;
+using System.Drawing;
 
 namespace GabrielForm
 {
@@ -91,7 +92,7 @@ namespace GabrielForm
 
         }
 
-        private void LoadProjetos()
+        public void LoadProjetos()
         {
             var codUsuario = UserData.user.Codigo;
 
@@ -99,7 +100,9 @@ namespace GabrielForm
 
             if (projetosId.Count < 1) return;
 
-            var projetos = ctx.Projeto.Where(p => projetosId.Contains(p.Codigo)).ToList();
+            var projetos = ctx.Projeto.Where(p => projetosId.Contains(p.Codigo)).OrderBy(p => p.Codigo).ToList();
+
+            flowLayoutPanel1.Controls.Clear();
 
             foreach (var projeto in projetos)
             {
@@ -116,18 +119,47 @@ namespace GabrielForm
                 var projetoSelecionado = ctx.Projeto.FirstOrDefault(p => p.Codigo == projeto.Codigo);
                 if (projetoSelecionado != null)
                 {
+                    ResetarCores();
+
                     if (menuPanelOriginalControls.Count == 0)
                         menuPanelOriginalControls.AddRange(contentPanel.Controls.Cast<Control>().ToList());
 
+
                     contentPanel.Controls.Clear();
 
-                    var projetoView = new ProjetoControl(projetoSelecionado)
+                    var projetoView = new ProjetoControl(projetoSelecionado, this)
                     {
                         Dock = DockStyle.Fill
                     };
 
                     contentPanel.Controls.Add(projetoView);
+                    PutStyle(control, Color.DeepSkyBlue);
                 }
+            }
+        }
+
+        private void ResetarCores()
+        {
+            foreach(Control control in flowLayoutPanel1.Controls)
+            {
+                if (control is ProjetoListaControl projetoControl)
+                {
+                    PutStyle(projetoControl, Color.Black);
+                }
+            }
+        }
+
+        private void PutStyle(Control control, Color cor)
+        {
+            foreach(Control c in control.Controls)
+            {
+                if (c.HasChildren)
+                    PutStyle(c, cor);
+
+                if (c is Splitter splitter)
+                    splitter.BackColor = cor;
+                else if (c is Label lb)
+                    lb.ForeColor = cor;
             }
         }
 

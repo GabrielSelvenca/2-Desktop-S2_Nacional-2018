@@ -20,7 +20,7 @@ namespace GabrielForm.Components
             Tag = proj;
 
             label1.Text = proj.Nome;
-            label2.Text = proj.Projeto_Tarefas.Count.ToString();
+            label2.Text = proj.Projeto_Tarefas.Where(p => p.isConcluida == false).Count().ToString();
 
             foreach (Control control in this.Controls)
             {

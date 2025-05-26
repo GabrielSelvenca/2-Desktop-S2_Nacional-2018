@@ -63,9 +63,9 @@ namespace GabrielForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap estrela_off1 {
+        internal static System.Drawing.Bitmap estrela_off {
             get {
-                object obj = ResourceManager.GetObject("estrela_off1", resourceCulture);
+                object obj = ResourceManager.GetObject("estrela_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace GabrielForm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap estrela_on1 {
+        internal static System.Drawing.Bitmap estrela_on {
             get {
-                object obj = ResourceManager.GetObject("estrela_on1", resourceCulture);
+                object obj = ResourceManager.GetObject("estrela_on", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -39,6 +39,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -73,24 +74,25 @@
             this.panel2.BackColor = System.Drawing.Color.LightSlateGray;
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(21, 323);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 338);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(745, 225);
+            this.panel2.Size = new System.Drawing.Size(786, 225);
             this.panel2.TabIndex = 3;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
-            this.panel3.Location = new System.Drawing.Point(3, 48);
+            this.panel3.Location = new System.Drawing.Point(5, 48);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(739, 174);
+            this.panel3.Size = new System.Drawing.Size(777, 174);
             this.panel3.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(274, 10);
+            this.label2.Location = new System.Drawing.Point(295, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(197, 29);
             this.label2.TabIndex = 1;
@@ -98,16 +100,18 @@
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 14);
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(745, 225);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(786, 199);
             this.flowLayoutPanel1.TabIndex = 4;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.textBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.textBox1.ForeColor = System.Drawing.Color.Gray;
             this.textBox1.Location = new System.Drawing.Point(65, 90);
             this.textBox1.Margin = new System.Windows.Forms.Padding(6);
             this.textBox1.Name = "textBox1";
@@ -119,10 +123,10 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Controls.Add(this.linkLabel1);
             this.panel4.Controls.Add(this.flowLayoutPanel1);
             this.panel4.Controls.Add(this.panel2);
-            this.panel4.Location = new System.Drawing.Point(45, 137);
+            this.panel4.Location = new System.Drawing.Point(44, 137);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(786, 563);
             this.panel4.TabIndex = 5;
@@ -130,9 +134,10 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Transparent;
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.pictureBox1);
-            this.panel5.Location = new System.Drawing.Point(-28, -8);
+            this.panel5.Location = new System.Drawing.Point(16, 129);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(843, 571);
             this.panel5.TabIndex = 6;
@@ -150,12 +155,24 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GabrielForm.Properties.Resources.Rosto_Triste;
-            this.pictureBox1.Location = new System.Drawing.Point(166, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(296, 160);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(511, 491);
+            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.SkyBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(4, 208);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(110, 25);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
             // 
             // ProjetoControl
             // 
@@ -165,13 +182,16 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel5);
             this.Name = "ProjetoControl";
             this.Size = new System.Drawing.Size(875, 703);
+            this.Load += new System.EventHandler(this.ProjetoControl_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -193,5 +213,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
