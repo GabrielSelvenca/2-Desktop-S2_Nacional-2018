@@ -24,21 +24,6 @@ C:\09_Projects\Atividades\S1 - Taskool (ok)\S1 - Taskool (ok)\obj\Debug\Interop.
 C:\09_Projects\Atividades\S1 - Taskool (ok)\S1 - Taskool (ok)\obj\Debug\Interop.WMPLauncher.dll
 C:\09_Projects\Atividades\S1 - Taskool (ok)\S1 - Taskool (ok)\obj\Debug\Interop.WMPLib.dll
 C:\09_Projects\Atividades\S1 - Taskool (ok)\S1 - Taskool (ok)\obj\Debug\GabrielForm.csproj.ResolveComReference.cache
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.csproj.AssemblyReference.cache
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\Interop.MediaPlayer.dll
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\Interop.WMPDXMLib.dll
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\Interop.WMPLauncher.dll
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\Interop.WMPLib.dll
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.csproj.ResolveComReference.cache
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.ConfigColors.resources
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.CriarProjeto.resources
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Form1.resources
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.HomeForm.resources
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.parent.resources
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Properties.Resources.resources
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Resources.Cadastrar.resources
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.csproj.GenerateResource.cache
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.csproj.CoreCompileInputs.cache
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\bin\Debug\GabrielForm.exe.config
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\bin\Debug\GabrielForm.exe
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\bin\Debug\GabrielForm.pdb
@@ -48,10 +33,28 @@ C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\bin\Debug\EntityFramework.xml
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\bin\Debug\EntityFramework.SqlServer.xml
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\bin\Debug\Newtonsoft.Json.xml
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.csproj.AssemblyReference.cache
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\Interop.MediaPlayer.dll
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\Interop.WMPDXMLib.dll
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\Interop.WMPLauncher.dll
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\Interop.WMPLib.dll
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.csproj.ResolveComReference.cache
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.FavoritosContentControl.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.FavoritosControl.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.ProjetoControl.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.ProjetoListaControl.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.TarefaControl.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.TarefaFavoritaControl.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.ConfigColors.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.CriarProjeto.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Form1.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.HomeForm.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.parent.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Properties.Resources.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Resources.Cadastrar.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.UserControl1.resources
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.csproj.GenerateResource.cache
+C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.csproj.CoreCompileInputs.cache
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielF.95E4822A.Up2Date
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.exe
 C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.pdb
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.UserControl1.resources
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.ProjetoListaControl.resources
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.ProjetoControl.resources
-C:\09_Projects\Atividades\2 - Desktop - S2 Nacional 2018\1-Desktop-S1-Nacional-2018\S1 - Taskool (ok)\obj\Debug\GabrielForm.Components.TarefaControl.resources

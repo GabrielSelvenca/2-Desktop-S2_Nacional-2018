@@ -36,15 +36,24 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.splitter1 = new System.Windows.Forms.Splitter();
+            this.label5 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -83,6 +92,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.flowLayoutPanel2);
             this.panel3.Location = new System.Drawing.Point(5, 48);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(777, 174);
@@ -132,6 +143,19 @@
             this.panel4.TabIndex = 5;
             this.panel4.Visible = false;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.SkyBlue;
+            this.linkLabel1.Location = new System.Drawing.Point(4, 208);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(110, 25);
+            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "linkLabel1";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Transparent;
@@ -162,17 +186,71 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // linkLabel1
+            // flowLayoutPanel2
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.SkyBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(4, 208);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(110, 25);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
+            this.flowLayoutPanel2.Controls.Add(this.label4);
+            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel3);
+            this.flowLayoutPanel2.Controls.Add(this.splitter1);
+            this.flowLayoutPanel2.Controls.Add(this.label5);
+            this.flowLayoutPanel2.Controls.Add(this.flowLayoutPanel4);
+            this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(172, 12);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(602, 150);
+            this.flowLayoutPanel2.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label4.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 22);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Pendentes";
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 25);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(602, 43);
+            this.flowLayoutPanel3.TabIndex = 1;
+            // 
+            // splitter1
+            // 
+            this.splitter1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.splitter1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.splitter1.Location = new System.Drawing.Point(3, 74);
+            this.splitter1.Name = "splitter1";
+            this.splitter1.Size = new System.Drawing.Size(602, 2);
+            this.splitter1.TabIndex = 2;
+            this.splitter1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label5.ForeColor = System.Drawing.Color.LightSkyBlue;
+            this.label5.Location = new System.Drawing.Point(3, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 22);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Concluídas";
+            // 
+            // flowLayoutPanel4
+            // 
+            this.flowLayoutPanel4.Location = new System.Drawing.Point(3, 104);
+            this.flowLayoutPanel4.Name = "flowLayoutPanel4";
+            this.flowLayoutPanel4.Size = new System.Drawing.Size(602, 43);
+            this.flowLayoutPanel4.TabIndex = 2;
+            // 
+            // panel6
+            // 
+            this.panel6.Location = new System.Drawing.Point(16, 12);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(150, 150);
+            this.panel6.TabIndex = 2;
             // 
             // ProjetoControl
             // 
@@ -190,11 +268,14 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.flowLayoutPanel2.ResumeLayout(false);
+            this.flowLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,5 +295,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
+        private System.Windows.Forms.Panel panel6;
     }
 }

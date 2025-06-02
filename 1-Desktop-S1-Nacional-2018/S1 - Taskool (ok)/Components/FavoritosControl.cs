@@ -1,28 +1,23 @@
 ﻿using GabrielForm.Models;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GabrielForm.Components
 {
-    public partial class ProjetoListaControl : UserControl
+    public partial class FavoritosControl : UserControl
     {
-        dbTarefasEntities ctx = new dbTarefasEntities();
-
-        public ProjetoListaControl(Projeto proj)
+        public FavoritosControl(int qtdFavoritos)
         {
             InitializeComponent();
 
-            Tag = proj;
-
-            label1.Text = proj.Nome;
-            var qtd = ctx.Projeto_Tarefas.Where(p => p.CodProjeto == proj.Codigo && p.isConcluida == false).Count().ToString();
-            label2.Text = qtd;
-
-            foreach (Control control in this.Controls)
-            {
-                control.Click += (s, e) => OnClick(e);
-            }
+            label2.Text = qtdFavoritos.ToString();
 
             AdicionarCliques(this);
         }

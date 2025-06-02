@@ -166,7 +166,7 @@
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label10.Location = new System.Drawing.Point(15, 594);
+            this.label10.Location = new System.Drawing.Point(15, 610);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 20);
             this.label10.TabIndex = 16;

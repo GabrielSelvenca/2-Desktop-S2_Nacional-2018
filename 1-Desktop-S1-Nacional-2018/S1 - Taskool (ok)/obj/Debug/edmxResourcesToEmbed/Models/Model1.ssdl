@@ -45,6 +45,16 @@
     <Property Name="Descricao" Type="varchar" MaxLength="300" Nullable="false" />
     <Property Name="isConcluida" Type="bit" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="Usuario">
     <Key>
       <PropertyRef Name="Codigo" />
@@ -159,6 +169,7 @@
     <EntitySet Name="Projeto" EntityType="Self.Projeto" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Projeto_Membros" EntityType="Self.Projeto_Membros" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Projeto_Tarefas" EntityType="Self.Projeto_Tarefas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Items_Fav__CodTa__48CFD27E" Association="Self.FK__Items_Fav__CodTa__48CFD27E">
       <End Role="Projeto_Tarefas" EntitySet="Projeto_Tarefas" />

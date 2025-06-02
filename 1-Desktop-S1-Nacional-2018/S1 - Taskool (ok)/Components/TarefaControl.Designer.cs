@@ -39,9 +39,10 @@
             // 
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.checkBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(739, 59);
+            this.panel3.Size = new System.Drawing.Size(738, 59);
             this.panel3.TabIndex = 1;
             // 
             // pictureBox1

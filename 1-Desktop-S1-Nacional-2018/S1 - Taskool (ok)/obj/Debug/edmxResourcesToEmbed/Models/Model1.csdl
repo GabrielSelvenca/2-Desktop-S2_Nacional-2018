@@ -37,6 +37,16 @@
     <NavigationProperty Name="Projeto" Relationship="Self.FK__Projeto_T__CodPr__3D5E1FD2" FromRole="Projeto_Tarefas" ToRole="Projeto" />
     <NavigationProperty Name="Usuario" Relationship="Self.Items_Favoritos" FromRole="Projeto_Tarefas" ToRole="Usuario" />
   </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
   <EntityType Name="Usuario">
     <Key>
       <PropertyRef Name="Codigo" />
@@ -109,10 +119,11 @@
     <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
     <End Role="Projeto" Type="Self.Projeto" Multiplicity="*" />
   </Association>
-  <EntityContainer Name="dbTarefasEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="dbTarefasEntities1" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Notificacoes" EntityType="Self.Notificacoes" />
     <EntitySet Name="Projeto" EntityType="Self.Projeto" />
     <EntitySet Name="Projeto_Tarefas" EntityType="Self.Projeto_Tarefas" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" />
     <AssociationSet Name="FK__Notificac__CodPr__412EB0B6" Association="Self.FK__Notificac__CodPr__412EB0B6">
       <End Role="Projeto" EntitySet="Projeto" />

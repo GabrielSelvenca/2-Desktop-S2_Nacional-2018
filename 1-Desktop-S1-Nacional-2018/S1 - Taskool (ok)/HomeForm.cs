@@ -97,18 +97,61 @@ namespace GabrielForm
             var codUsuario = UserData.user.Codigo;
 
             var projetosId = ctx.Database.SqlQuery<int>("SELECT CodProjeto FROM Projeto_Membros WHERE CodMembro = @p0", codUsuario).ToList();
+            var favoritos = ctx.Database.SqlQuery<int>("SELECT CodTarefa FROM Items_Favoritos WHERE CodUsuario = @p0", codUsuario).ToList();
 
             if (projetosId.Count < 1) return;
 
-            var projetos = ctx.Projeto.Where(p => projetosId.Contains(p.Codigo)).OrderBy(p => p.Codigo).ToList();
-
             flowLayoutPanel1.Controls.Clear();
+
+            if (favoritos.Count > 0)
+            {
+                var favoritosControl = new FavoritosControl(favoritos.Count);
+                flowLayoutPanel1.Controls.Add(favoritosControl);
+                favoritosControl.Click += FavoritosControl_Click;
+            }
+
+            var projetos = ctx.Projeto.Where(p => projetosId.Contains(p.Codigo)).OrderBy(p => p.Codigo).ToList();
 
             foreach (var projeto in projetos)
             {
                 var projetoControl = new ProjetoListaControl(projeto);
                 flowLayoutPanel1.Controls.Add(projetoControl);
                 projetoControl.Click += ProjetoControl_Click;
+            }
+        }
+
+        private void FavoritosControl_Click(object sender, EventArgs e)
+        {
+            if (sender is FavoritosControl control)
+            {
+                ResetarCores();
+
+                if (menuPanelOriginalControls.Count == 0)
+                    menuPanelOriginalControls.AddRange(contentPanel.Controls.Cast<Control>().ToList());
+
+
+                contentPanel.Controls.Clear();
+
+
+                var favoritosDetalhados = ctx.Database.SqlQuery<FavoritoModel>(
+                    @"SELECT 
+        t.Codigo AS CodTarefa, 
+        t.Descricao AS NomeTarefa, 
+        p.Nome AS NomeProjeto
+      FROM Items_Favoritos f
+      INNER JOIN Projeto_Tarefas t ON f.CodTarefa = t.Codigo
+      INNER JOIN Projeto p ON t.CodProjeto = p.Codigo
+      WHERE f.CodUsuario = @p0",
+                    UserData.user.Codigo).ToList();
+
+
+                var projetoView = new FavoritosContentControl(favoritosDetalhados, ctx, this)
+                {
+                    Dock = DockStyle.Fill
+                };
+
+                contentPanel.Controls.Add(projetoView);
+                PutStyle(control, Color.DeepSkyBlue);
             }
         }
 
@@ -142,10 +185,21 @@ namespace GabrielForm
         {
             foreach(Control control in flowLayoutPanel1.Controls)
             {
-                if (control is ProjetoListaControl projetoControl)
+                if (control is ProjetoListaControl || control is FavoritosControl)
                 {
-                    PutStyle(projetoControl, Color.Black);
+                    PutStyle(control, Color.Black);
                 }
+            }
+        }
+
+        public void AtualizarFavoritosAbertos()
+        {
+            if (contentPanel.Controls.Count > 0 &&
+                contentPanel.Controls[0] is FavoritosContentControl)
+            {
+                FavoritosControl_Click(flowLayoutPanel1.Controls
+                    .OfType<FavoritosControl>()
+                    .FirstOrDefault(), EventArgs.Empty);
             }
         }
 
@@ -243,7 +297,7 @@ namespace GabrielForm
             new CriarProjeto().Show();
         }
 
-        private void CarrregarMenu()
+        public void CarrregarMenu()
         {
             contentPanel.Controls.Clear();
 

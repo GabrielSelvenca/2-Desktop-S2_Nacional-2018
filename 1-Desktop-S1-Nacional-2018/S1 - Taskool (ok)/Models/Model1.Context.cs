@@ -16,7 +16,7 @@ namespace GabrielForm.Models
     public partial class dbTarefasEntities : DbContext
     {
         public dbTarefasEntities()
-            : base("name=dbTarefasEntities")
+            : base("name=dbTarefasEntities1")
         {
         }
     
@@ -28,6 +28,7 @@ namespace GabrielForm.Models
         public virtual DbSet<Notificacoes> Notificacoes { get; set; }
         public virtual DbSet<Projeto> Projeto { get; set; }
         public virtual DbSet<Projeto_Tarefas> Projeto_Tarefas { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

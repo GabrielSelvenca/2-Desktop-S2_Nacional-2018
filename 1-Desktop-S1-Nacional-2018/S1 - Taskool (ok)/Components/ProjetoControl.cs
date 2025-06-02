@@ -1,13 +1,9 @@
 ﻿using GabrielForm.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GabrielForm.Components
@@ -27,7 +23,7 @@ namespace GabrielForm.Components
 
             proj = projeto;
             this.homeForm = homeForm;
-
+            
             var tarefas = ctx.Projeto_Tarefas
                 .Where(t => t.CodProjeto == proj.Codigo)
                 .ToList();
@@ -44,10 +40,32 @@ namespace GabrielForm.Components
             }
         }
 
+        public void AtualizarProgressoCircular()
+        {
+            var tarefas = ctx.Projeto_Tarefas
+                .Where(t => t.CodProjeto == proj.Codigo)
+                .ToList();
+
+            int total = tarefas.Count;
+            int concluidas = tarefas.Count(t => t.isConcluida == true);
+            int percentual = total / 100;
+
+            panel6.Controls.Clear();
+            var circle = new CircleBoxProgress
+            {
+                Dock = DockStyle.Fill,
+                Percent = percentual
+            };
+            panel6.Controls.Add(circle);
+        }
+
         private void ProjetoControl_Load(object sender, EventArgs e)
         {
             linkLabel1.Text = "0 TAREFAS CONCLUIDAS";
-            carregarTarefas();
+
+            carregarTarefas(false);
+
+            AtualizarProgressoCircular();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -80,55 +98,70 @@ namespace GabrielForm.Components
                 ctx.Projeto_Tarefas.Add(proj_tarefa);
                 ctx.SaveChanges();
 
-                var tarefaControl = new TarefaControl(proj_tarefa);
+                var tarefaControl = new TarefaControl(proj_tarefa, homeForm);
 
-                carregarTarefas();
+                carregarTarefas(false);
                 textBox1.Text = "Adicionar uma tarefa...";
                 textBox1.ForeColor = Color.Gray;
             }
         }
 
-        private void carregarTarefas()
+        private void carregarTarefas(bool concluidas)
         {
-            var tarefas = ctx.Projeto_Tarefas
-                .Where(t => t.CodProjeto == proj.Codigo)
+            var tarefasPendentes = ctx.Projeto_Tarefas
+                .Where(t => t.CodProjeto == proj.Codigo && t.isConcluida == false)
                 .OrderByDescending(t => t.Codigo)
                 .ToList();
 
-            if (tarefas.Count <= 0) return;
+            var tarefasConluidas = ctx.Projeto_Tarefas
+                .Where(t => t.CodProjeto == proj.Codigo && t.isConcluida == true)
+                .OrderByDescending(t => t.Codigo)
+                .ToList();
+
+            var tarefas = concluidas ? tarefasConluidas : tarefasPendentes;
+
+            if (tarefasConluidas != null)
+                linkLabel1.Text = tarefasConluidas.Count + " TAREFAS CONCLUIDAS";
 
             flowLayoutPanel1.Controls.Clear();
 
-            int i = 0;
+            if (tarefas.Count <= 0)
+            {
+                return;
+            }
 
             foreach (var tarefa in tarefas)
             {
-                if (tarefa.isConcluida == true)
-                {
-                    i++;
-                    linkLabel1.Text = i + " TAREFAS CONCLUIDAS";
-                    continue;
-                }
-
-                var tarefaControl = new TarefaControl(tarefa);
-                tarefaControl.CheckBoxSelected += TarefaControl_CheckBoxSelected;
+                var tarefaControl = new TarefaControl(tarefa, homeForm);
+                tarefaControl.CheckBoxSelected += Tarefas_CheckBoxSelected;
                 flowLayoutPanel1.Controls.Add(tarefaControl);
             }
         }
 
-        private void TarefaControl_CheckBoxSelected(object sender, Projeto_Tarefas e)
+        public void Tarefas_CheckBoxSelected(object sender, Projeto_Tarefas e)
         {
-            if (sender is TarefaControl control && control.Tag is Projeto_Tarefas tarefas)
+            AttConclusao(e);
+        }
+
+        public void AttConclusao(Projeto_Tarefas proj)
+        {
+            var tarefaAtual = ctx.Projeto_Tarefas.FirstOrDefault(p => p.Codigo == proj.Codigo);
+
+            if (tarefaAtual != null)
             {
-                var tarefaSelecionada = ctx.Projeto_Tarefas.FirstOrDefault(p => p.Codigo == tarefas.Codigo);
-                if (tarefaSelecionada != null)
-                {
-                    tarefaSelecionada.isConcluida = !tarefaSelecionada.isConcluida;
-                    ctx.SaveChanges();
-                    carregarTarefas();
-                    homeForm.LoadProjetos();
-                }
+
+                tarefaAtual.isConcluida = !tarefaAtual.isConcluida;
+                textBox1.Enabled = true;
+                ctx.SaveChanges();
+                carregarTarefas(false);
+                homeForm.LoadProjetos();
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            textBox1.Enabled = false;
+            carregarTarefas(true);
         }
     }
 }

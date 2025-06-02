@@ -50,6 +50,16 @@
           <Property Name="Descricao" Type="varchar" MaxLength="300" Nullable="false" />
           <Property Name="isConcluida" Type="bit" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="Codigo" />
@@ -164,6 +174,7 @@
           <EntitySet Name="Projeto" EntityType="Self.Projeto" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Projeto_Membros" EntityType="Self.Projeto_Membros" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Projeto_Tarefas" EntityType="Self.Projeto_Tarefas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Items_Fav__CodTa__48CFD27E" Association="Self.FK__Items_Fav__CodTa__48CFD27E">
             <End Role="Projeto_Tarefas" EntitySet="Projeto_Tarefas" />
@@ -240,6 +251,16 @@
           <NavigationProperty Name="Projeto" Relationship="Self.FK__Projeto_T__CodPr__3D5E1FD2" FromRole="Projeto_Tarefas" ToRole="Projeto" />
           <NavigationProperty Name="Usuario" Relationship="Self.Items_Favoritos" FromRole="Projeto_Tarefas" ToRole="Usuario" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <EntityType Name="Usuario">
           <Key>
             <PropertyRef Name="Codigo" />
@@ -312,10 +333,11 @@
           <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
           <End Role="Projeto" Type="Self.Projeto" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="dbTarefasEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="dbTarefasEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Notificacoes" EntityType="Self.Notificacoes" />
           <EntitySet Name="Projeto" EntityType="Self.Projeto" />
           <EntitySet Name="Projeto_Tarefas" EntityType="Self.Projeto_Tarefas" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" />
           <AssociationSet Name="FK__Notificac__CodPr__412EB0B6" Association="Self.FK__Notificac__CodPr__412EB0B6">
             <End Role="Projeto" EntitySet="Projeto" />
@@ -347,7 +369,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="dbTarefasModelStoreContainer" CdmEntityContainer="dbTarefasEntities">
+        <EntityContainerMapping StorageEntityContainer="dbTarefasModelStoreContainer" CdmEntityContainer="dbTarefasEntities1">
           <EntitySetMapping Name="Notificacoes">
             <EntityTypeMapping TypeName="dbTarefasModel.Notificacoes">
               <MappingFragment StoreEntitySet="Notificacoes">
@@ -377,6 +399,17 @@
                 <ScalarProperty Name="CodProjeto" ColumnName="CodProjeto" />
                 <ScalarProperty Name="Descricao" ColumnName="Descricao" />
                 <ScalarProperty Name="isConcluida" ColumnName="isConcluida" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="dbTarefasModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

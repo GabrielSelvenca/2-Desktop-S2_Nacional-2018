@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="dbTarefasModelStoreContainer" CdmEntityContainer="dbTarefasEntities">
+  <EntityContainerMapping StorageEntityContainer="dbTarefasModelStoreContainer" CdmEntityContainer="dbTarefasEntities1">
     <EntitySetMapping Name="Notificacoes">
       <EntityTypeMapping TypeName="dbTarefasModel.Notificacoes">
         <MappingFragment StoreEntitySet="Notificacoes">
@@ -30,6 +30,17 @@
           <ScalarProperty Name="CodProjeto" ColumnName="CodProjeto" />
           <ScalarProperty Name="Descricao" ColumnName="Descricao" />
           <ScalarProperty Name="isConcluida" ColumnName="isConcluida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="dbTarefasModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
