@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\fotousercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\fotousercontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\projetocontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\projetocontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\projetolistacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\projetolistacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\tarefafavoritacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\tarefafavoritacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\tarefafavoritacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\tarefafavoritacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\tarefacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\tarefacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,52 +39,8 @@
       "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\projetocontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\projetocontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\projetocontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\projetolistacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\projetolistacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\homeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\circleboxprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\circleboxprogress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\tarefafavoritacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\tarefafavoritacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\favoritoscontentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\favoritoscontentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\components\\projetolistacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\components\\projetolistacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\favoritoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\favoritoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\userdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|c:\\09_projects\\atividades\\2 - desktop - s2 nacional 2018\\1-desktop-s1-nacional-2018\\s1 - taskool (ok)\\criarprojeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6DD5E7BD-42E7-448B-BEDD-2C04CAC42249}|S1 - Taskool (ok)\\GabrielForm.csproj|solutionrelative:s1 - taskool (ok)\\criarprojeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -69,8 +49,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 342,
-          "SelectedChildIndex": 9,
+          "DockedHeight": 497,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,209 +58,132 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FotoUserControl.cs [Design]",
+              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\FotoUserControl.cs",
+              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\FotoUserControl.cs",
+              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\FotoUserControl.cs [Design]",
+              "RelativeToolTip": "S1 - Taskool (ok)\\Components\\FotoUserControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T16:20:15.334Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TarefaControl.cs [Design]",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaControl.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\TarefaControl.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaControl.cs [Design]",
-              "RelativeToolTip": "S1 - Taskool (ok)\\Components\\TarefaControl.cs [Design]",
+              "Title": "UserControl1.cs [Design]",
+              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\UserControl1.cs",
+              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\UserControl1.cs",
+              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\UserControl1.cs [Design]",
+              "RelativeToolTip": "S1 - Taskool (ok)\\Components\\UserControl1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T17:11:15.039Z",
+              "WhenOpened": "2025-06-03T16:19:37.423Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HomeForm.cs [Design]",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\HomeForm.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\HomeForm.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\HomeForm.cs [Design]",
-              "RelativeToolTip": "S1 - Taskool (ok)\\HomeForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T17:04:59.342Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Form1.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Form1.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Form1.cs",
-              "RelativeToolTip": "S1 - Taskool (ok)\\Form1.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwDQAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T17:03:41.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CircleBoxProgress.cs",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\CircleBoxProgress.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\CircleBoxProgress.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\CircleBoxProgress.cs",
-              "RelativeToolTip": "S1 - Taskool (ok)\\CircleBoxProgress.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAzwBcAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T16:37:11.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ProjetoControl.cs [Design]",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\ProjetoControl.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\ProjetoControl.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\ProjetoControl.cs [Design]",
-              "RelativeToolTip": "S1 - Taskool (ok)\\Components\\ProjetoControl.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T15:32:50.465Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "ProjetoListaControl.cs [Design]",
               "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\ProjetoListaControl.cs",
               "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\ProjetoListaControl.cs",
               "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\ProjetoListaControl.cs [Design]",
               "RelativeToolTip": "S1 - Taskool (ok)\\Components\\ProjetoListaControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T15:32:48.301Z",
+              "WhenOpened": "2025-06-03T16:19:26.467Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeForm.cs",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\HomeForm.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\HomeForm.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\HomeForm.cs",
-              "RelativeToolTip": "S1 - Taskool (ok)\\HomeForm.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAcwDwAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T13:49:43.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserData.cs",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\UserData.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\UserData.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\UserData.cs",
-              "RelativeToolTip": "S1 - Taskool (ok)\\UserData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T13:48:49.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TarefaControl.cs",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaControl.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\TarefaControl.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaControl.cs",
-              "RelativeToolTip": "S1 - Taskool (ok)\\Components\\TarefaControl.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAYwDYAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T13:46:54.093Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "TarefaFavoritaControl.cs",
               "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaFavoritaControl.cs",
               "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\TarefaFavoritaControl.cs",
               "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaFavoritaControl.cs",
               "RelativeToolTip": "S1 - Taskool (ok)\\Components\\TarefaFavoritaControl.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAmwDgAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwCkAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T13:40:02.824Z",
+              "WhenOpened": "2025-06-03T16:08:21.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "TarefaFavoritaControl.cs [Design]",
+              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaFavoritaControl.cs",
+              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\TarefaFavoritaControl.cs",
+              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaFavoritaControl.cs [Design]",
+              "RelativeToolTip": "S1 - Taskool (ok)\\Components\\TarefaFavoritaControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T16:08:20.388Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TarefaControl.cs",
+              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaControl.cs",
+              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\TarefaControl.cs",
+              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaControl.cs",
+              "RelativeToolTip": "S1 - Taskool (ok)\\Components\\TarefaControl.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAawDIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T16:02:54.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TarefaControl.cs [Design]",
+              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaControl.cs",
+              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\TarefaControl.cs",
+              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\TarefaControl.cs [Design]",
+              "RelativeToolTip": "S1 - Taskool (ok)\\Components\\TarefaControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T16:08:04.081Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Form1.cs",
+              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Form1.cs",
+              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Form1.cs",
+              "RelativeToolTip": "S1 - Taskool (ok)\\Form1.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwBgAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T16:02:29.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ProjetoControl.cs",
               "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\ProjetoControl.cs",
               "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\ProjetoControl.cs",
               "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\ProjetoControl.cs",
               "RelativeToolTip": "S1 - Taskool (ok)\\Components\\ProjetoControl.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwCoAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAIwDIAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T13:28:38.571Z",
+              "WhenOpened": "2025-06-03T16:02:20.837Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FavoritosContentControl.cs",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\FavoritosContentControl.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\FavoritosContentControl.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\FavoritosContentControl.cs",
-              "RelativeToolTip": "S1 - Taskool (ok)\\Components\\FavoritosContentControl.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAcwBMAAAAmAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ProjetoControl.cs [Design]",
+              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\ProjetoControl.cs",
+              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\ProjetoControl.cs",
+              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\ProjetoControl.cs [Design]",
+              "RelativeToolTip": "S1 - Taskool (ok)\\Components\\ProjetoControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T13:26:43.904Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FavoritoService.cs",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\FavoritoService.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\FavoritoService.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\FavoritoService.cs",
-              "RelativeToolTip": "S1 - Taskool (ok)\\FavoritoService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T13:23:48.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CriarProjeto.cs",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\CriarProjeto.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\CriarProjeto.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\CriarProjeto.cs",
-              "RelativeToolTip": "S1 - Taskool (ok)\\CriarProjeto.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAlwHAAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T13:23:19.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProjetoListaControl.cs",
-              "DocumentMoniker": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\ProjetoListaControl.cs",
-              "RelativeDocumentMoniker": "S1 - Taskool (ok)\\Components\\ProjetoListaControl.cs",
-              "ToolTip": "C:\\09_Projects\\Atividades\\2 - Desktop - S2 Nacional 2018\\1-Desktop-S1-Nacional-2018\\S1 - Taskool (ok)\\Components\\ProjetoListaControl.cs",
-              "RelativeToolTip": "S1 - Taskool (ok)\\Components\\ProjetoListaControl.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T13:18:41.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-03T16:02:19.836Z",
+              "EditorCaption": " [Design]"
             }
           ]
         },
         {
-          "DockedHeight": 272,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            }
-          ]
-        },
-        {
-          "DockedHeight": 53,
+          "DockedHeight": 117,
           "SelectedChildIndex": -1,
           "Children": [
             {

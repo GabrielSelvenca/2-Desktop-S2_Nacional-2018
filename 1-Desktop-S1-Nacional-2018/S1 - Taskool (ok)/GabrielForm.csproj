@@ -91,6 +91,12 @@
     <Compile Include="Components\FavoritosControl.Designer.cs">
       <DependentUpon>FavoritosControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\FotoUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\FotoUserControl.Designer.cs">
+      <DependentUpon>FotoUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\ProjetoControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\FavoritosControl.resx">
       <DependentUpon>FavoritosControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\FotoUserControl.resx">
+      <DependentUpon>FotoUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ProjetoControl.resx">
       <DependentUpon>ProjetoControl.cs</DependentUpon>

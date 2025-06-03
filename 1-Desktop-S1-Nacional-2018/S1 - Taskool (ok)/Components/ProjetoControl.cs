@@ -48,7 +48,7 @@ namespace GabrielForm.Components
 
             int total = tarefas.Count;
             int concluidas = tarefas.Count(t => t.isConcluida == true);
-            int percentual = total / 100;
+            int percentual = total == 0 ? 0 : (int)((concluidas / (float)total) * 100);
 
             panel6.Controls.Clear();
             var circle = new CircleBoxProgress
@@ -98,7 +98,7 @@ namespace GabrielForm.Components
                 ctx.Projeto_Tarefas.Add(proj_tarefa);
                 ctx.SaveChanges();
 
-                var tarefaControl = new TarefaControl(proj_tarefa, homeForm);
+                var tarefaControl = new TarefaControl(proj_tarefa, homeForm, this);
 
                 carregarTarefas(false);
                 textBox1.Text = "Adicionar uma tarefa...";
@@ -132,7 +132,7 @@ namespace GabrielForm.Components
 
             foreach (var tarefa in tarefas)
             {
-                var tarefaControl = new TarefaControl(tarefa, homeForm);
+                var tarefaControl = new TarefaControl(tarefa, homeForm, this);
                 tarefaControl.CheckBoxSelected += Tarefas_CheckBoxSelected;
                 flowLayoutPanel1.Controls.Add(tarefaControl);
             }

@@ -86,7 +86,7 @@ namespace GabrielForm
                 if (File.Exists(caminhoArquivo))
                 {
                     var text = File.ReadAllText(caminhoArquivo);
-                    File.WriteAllText(caminhoArquivo, $"{text} \n{DateTime.Now.ToString("dd/MM/yyyy")};{DateTime.Now.ToString("HH:mm")};{user.Usuario1};{ip}");
+                    File.WriteAllText(caminhoArquivo, $"{text} \n{DateTime.Now.ToString("dd/MM/yyyy")};{DateTime.Now.ToString("HH:mm")};{user.Usuario1};{ip}4");
                 }
                 else
                 {

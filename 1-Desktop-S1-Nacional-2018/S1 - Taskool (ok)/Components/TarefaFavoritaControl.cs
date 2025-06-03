@@ -36,8 +36,12 @@ namespace GabrielForm.Components
         {
             if (Parent is Control parent)
             {
+                MessageBox.Show("Parent: " + parent + "\nÉ projetoControl: " + (parent is ProjetoControl));
+
                 while (parent != null && !(parent is ProjetoControl))
                     parent = parent.Parent;
+
+                MessageBox.Show("Parent: " + parent + "\nÉ projetoControl: " + (parent is ProjetoControl));
 
                 if (parent is ProjetoControl projetoControl)
                 {
