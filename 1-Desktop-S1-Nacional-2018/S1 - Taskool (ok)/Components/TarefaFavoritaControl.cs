@@ -15,6 +15,7 @@ namespace GabrielForm.Components
     public partial class TarefaFavoritaControl : UserControl
     {
         private FavoritoModel favorito;
+        private Projeto_Tarefas tarefaAtual;
         HomeForm hf;
         dbTarefasEntities ctx;
 
@@ -28,27 +29,18 @@ namespace GabrielForm.Components
 
             label1.Text = favorito.NomeProjeto;
             checkBox1.Text = favorito.NomeTarefa;
+            tarefaAtual = ctx.Projeto_Tarefas.FirstOrDefault(p => p.Codigo == favorito.CodTarefa);
+            checkBox1.Checked = (bool)tarefaAtual.isConcluida;
             checkBox1.CheckedChanged += CheckBox1_CheckedChanged;
             pictureBox1.Tag = "On";
         }
 
         private void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (Parent is Control parent)
-            {
-                MessageBox.Show("Parent: " + parent + "\nÉ projetoControl: " + (parent is ProjetoControl));
-
-                while (parent != null && !(parent is ProjetoControl))
-                    parent = parent.Parent;
-
-                MessageBox.Show("Parent: " + parent + "\nÉ projetoControl: " + (parent is ProjetoControl));
-
-                if (parent is ProjetoControl projetoControl)
-                {
-                    var tarefa = ctx.Projeto_Tarefas.FirstOrDefault(t => t.Codigo == favorito.CodTarefa);
-                    projetoControl.AttConclusao(tarefa);
-                }
-            }
+            var tarefaAtual = ctx.Projeto_Tarefas.FirstOrDefault(p => p.Codigo == favorito.CodTarefa);
+            tarefaAtual.isConcluida = checkBox1.Checked;
+            ctx.SaveChanges();
+            hf.LoadProjetos();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
